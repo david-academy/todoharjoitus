@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+
+    <title>TODO!!</title>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Att-göra-lista<small> av David</small></h1>
+    <div class="jumbotron">
+        <h1>Din att-göra-lista</h1>
+        <h4>Här kan du kolla upp vad du borde komma ihåg</h4>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Lägg till en ny att-göra</div>
+        <div class="panel-body">
+            <form class="form-inline" id="todoInputForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" size="35" id="todoTitle" placeholder="Kom ihåg att...">
+                </div>
+                <button type="submit" class="btn btn-primary">Lägg till</button>
+            </form>
+
+
+
+            <div class="panel-body" id="postResult"></div>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Tidigare uppgifter</div>
+        <div class="panel-body">
+            <button class="btn btn-primary" onclick="performGetRequest1()">Hämta</button>
+            <button class="btn btn-warning" onclick="clearOutput()">Göm</button>
+            <div class="panel-body" id="getResult1"></div>
+        </div>
+    </div>
+<br/>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">Ta bort en uppgift</div>
+        <div class="panel-body">
+            När du har gjort färdigt en uppgift kan du skriva in numret i fältet nedan för att ta bort den.
+            <div class="form-group">
+                <input type="text" class="form-control" size="15"  id="ToDoId" placeholder="Att-göra nummer...">
+            </div>
+            <button type="submit" class="btn btn-warning" onclick="performDeleteRequest()">Ta bort</button>
+            <div class="panel-body" id="deleteResult"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

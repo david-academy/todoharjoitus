@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS todot;
+
+CREATE TABLE todot (
+id SERIAL PRIMARY KEY,
+uppgift VARCHAR(250),
+fardig BOOLEAN NOT NULL
+);
